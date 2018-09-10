@@ -35,7 +35,7 @@ class App extends Component {
       <div className="App">
           <h2>Απο Greeklish σε Ελληνικά</h2>
           <form onSubmit={(event) => {event.preventDefault()}}>
-            <Input type="text" value={name} onChange={(event) => this.setState({ name: event.target.value })}/>
+            <Input style={{ width: '10vw', minWidth: '200px'}} type="text" value={name} onChange={(event) => this.setState({ name: event.target.value })}/>
             <Button type="submit" style={{ marginLeft: '10px' }} onClick={this.onClick}>GO</Button>
           </form>
           <p style={{ paddingTop: '30px', fontSize: '22px'}}>Μετάφραση : {result}</p>
