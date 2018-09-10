@@ -2979,9 +2979,9 @@ greek-name-klitiki@^1.0.2:
     hyphenation.el-monoton "^0.2.1"
     hypher "^0.2.5"
 
-greek-names-mapper@chrispanag/greek-name-mapper:
-  version "1.0.1"
-  resolved "https://codeload.github.com/chrispanag/greek-name-mapper/tar.gz/40d3b6636aad51d2f0aaf7684dc90636bbb51e58"
+greek-names-mapper@chrispanag/greek-name-mapper#feff667:
+  version "1.0.2"
+  resolved "https://codeload.github.com/chrispanag/greek-name-mapper/tar.gz/feff667209f3be03f0ede2dd7e95a5dd8f1b701c"
   dependencies:
     fuse.js "^3.2.1"
     greek-utils "^1.2.2"
