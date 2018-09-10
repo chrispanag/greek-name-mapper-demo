@@ -25,7 +25,7 @@ class App extends Component {
     if(!result) {
       result = name;
     }
-    const transformed = klitiki(result);
+    const transformed = klitiki(result, false);
     this.setState({ result, transformed }); 
   }
   
