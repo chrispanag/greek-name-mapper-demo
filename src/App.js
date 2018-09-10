@@ -21,7 +21,10 @@ class App extends Component {
       this.setState({ result: 'Πρεπει να βάλεις όνομα'});
       return
     }
-    const result = mapper.match(name);
+    let result = mapper.match(name);
+    if(!result) {
+      result = name;
+    }
     const transformed = klitiki(result);
     this.setState({ result, transformed }); 
   }
@@ -31,8 +34,10 @@ class App extends Component {
     return (
       <div className="App">
           <h2>Απο Greeklish σε Ελληνικά</h2>
-          <Input type="text" value={name} onChange={(event) => this.setState({ name: event.target.value })}/>
-          <Button style={{ marginLeft: '10px' }}onClick={this.onClick}>GO</Button>
+          <form onSubmit={(event) => {event.preventDefault()}}>
+            <Input type="text" value={name} onChange={(event) => this.setState({ name: event.target.value })}/>
+            <Button type="submit" style={{ marginLeft: '10px' }} onClick={this.onClick}>GO</Button>
+          </form>
           <p style={{ paddingTop: '30px', fontSize: '22px'}}>Μετάφραση : {result}</p>
           <p style={{ paddingTop: '10px', fontSize: '22px'}}>Κλητική : {transformed}</p>
       </div>
