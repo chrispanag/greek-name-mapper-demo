@@ -18,7 +18,7 @@ class App extends Component {
   onClick = () => {
     const { mapper, name } = this.state;
     if(!name) {
-      this.setState({ result: 'Πρεπει να βάλεις όνομα'});
+      this.setState({ result: 'Πρεπει να βάλεις όνομα', transformed: ''});
       return
     }
     let result = mapper.match(name);
