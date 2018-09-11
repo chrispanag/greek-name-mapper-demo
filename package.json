@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "greek-name-klitiki": "^1.0.2",
-    "greek-names-mapper": "chrispanag/greek-name-mapper#feff667",
+    "greek-names-mapper": "chrispanag/greek-name-mapper",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5",

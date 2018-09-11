@@ -17,10 +17,12 @@ class App extends Component {
 
   onClick = () => {
     const { mapper, name } = this.state;
+
     if(!name) {
-      this.setState({ result: 'Πρεπει να βάλεις όνομα', transformed: ''});
+      this.setState({ result: 'Πρέπει πρώτα να βάλεις όνομα', transformed: ''});
       return
     }
+
     let result = mapper.match(name);
     if(!result) {
       result = name;
@@ -33,13 +35,13 @@ class App extends Component {
     const { name, result, transformed } = this.state;
     return (
       <div className="App">
-          <h2>Απο Greeklish σε Ελληνικά</h2>
+          <h2>Transform Greek First Name</h2>
           <form onSubmit={(event) => {event.preventDefault()}}>
             <Input style={{ width: '10vw', minWidth: '200px'}} type="text" value={name} onChange={(event) => this.setState({ name: event.target.value })}/>
             <Button type="submit" style={{ marginLeft: '10px' }} onClick={this.onClick}>GO</Button>
           </form>
-          <p style={{ paddingTop: '30px', fontSize: '22px'}}>Μετάφραση : {result}</p>
-          <p style={{ paddingTop: '10px', fontSize: '22px'}}>Κλητική : {transformed}</p>
+          <p style={{ paddingTop: '30px', fontSize: '22px'}}>Μετάφραση: {result}</p>
+          <p style={{ paddingTop: '10px', fontSize: '22px'}}>Κλητική: {transformed}</p>
       </div>
     );
   }
