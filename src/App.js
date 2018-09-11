@@ -25,7 +25,7 @@ class App extends Component {
       return
     }
 
-    const transformed = klitiki(klitiki_name, false);
+    const transformed = klitiki(klitiki_name.trim(), false);
     this.setState({ transformed });
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
       return
     }
 
-    let result = mapper.match(greeklish_name);
+    let result = mapper.match(greeklish_name.trim());
     if (!result) {
       result = greeklish_name;
     }
