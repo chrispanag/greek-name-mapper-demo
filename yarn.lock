@@ -2991,7 +2991,7 @@ greek-name-klitiki@^1.0.2:
 
 greek-names-mapper@chrispanag/greek-name-mapper:
   version "1.0.2"
-  resolved "https://codeload.github.com/chrispanag/greek-name-mapper/tar.gz/fd2ccd60e9b545471517e5d6e8360f307a6fedc9"
+  resolved "https://codeload.github.com/chrispanag/greek-name-mapper/tar.gz/f52d3ff1d18c9e4519bdeaf44d0e74a45026b8f1"
   dependencies:
     fuse.js "^3.2.1"
     greek-utils "^1.2.2"

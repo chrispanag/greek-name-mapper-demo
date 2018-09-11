@@ -18,26 +18,28 @@ class App extends Component {
   }
 
   toVocativeClick = () => {
-    const { klitiki_name } = this.state;
+    let { klitiki_name } = this.state;
+    klitiki_name = klitiki_name.trim();
 
     if (!klitiki_name) {
       this.setState({ transformed: 'Πρέπει πρώτα να βάλεις όνομα', transformed: '' });
       return
     }
 
-    const transformed = klitiki(klitiki_name.trim(), false);
+    const transformed = klitiki(klitiki_name, false);
     this.setState({ transformed });
   }
 
   toGreekClick = () => {
-    const { mapper, greeklish_name } = this.state;
-
+    let { mapper, greeklish_name } = this.state;
+    greeklish_name = greeklish_name.trim();
+    
     if (!greeklish_name) {
       this.setState({ result: 'Πρέπει πρώτα να βάλεις όνομα', transformed: '' });
       return
     }
 
-    let result = mapper.match(greeklish_name.trim());
+    let result = mapper.match(greeklish_name);
     if (!result) {
       result = greeklish_name;
     }
