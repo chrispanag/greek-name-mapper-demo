@@ -23,7 +23,7 @@ class App extends Component {
 
     if (!klitiki_name) {
       this.setState({ transformed: 'Πρέπει πρώτα να βάλεις όνομα', transformed: '' });
-      return
+      return;
     }
 
     const transformed = klitiki(klitiki_name, false);
@@ -36,7 +36,7 @@ class App extends Component {
     
     if (!greeklish_name) {
       this.setState({ result: 'Πρέπει πρώτα να βάλεις όνομα', transformed: '' });
-      return
+      return;
     }
 
     let result = mapper.match(greeklish_name);

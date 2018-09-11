@@ -2,7 +2,7 @@
 
 ## This is a Demo React App for the following two repos:
 
-* https://github.com/chrispanag/greek-name-klitiki
-* https://github.com/chrispanag/greek-name-mapper
+* [greek-name-klitiki](https://github.com/chrispanag/greek-name-klitiki)
+* [greek-name-mapper](https://github.com/chrispanag/greek-name-mapper)
 
 You can find the demo here: https://greek-names-klitiki.herokuapp.com/
