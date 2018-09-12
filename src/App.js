@@ -72,6 +72,7 @@ class App extends Component {
         <Segment>
           <Container>
             <Header as='h2'><a href="https://github.com/chrispanag/greek-name-klitiki"><Icon name="github" />Transform to Vocative (Κλητική)</a></Header>
+            <p>A NodeJS package that transforms greek names to the vocative grammatical form (klitiki).</p>
             <Form onSubmit={(event) => { event.preventDefault() }}>
               <Input style={{ width: '10vw', minWidth: '200px' }} type="text" value={klitiki_name} onChange={(event) => this.setState({ klitiki_name: event.target.value })} />
               <Button type="submit" style={{ marginLeft: '10px' }} onClick={this.toVocativeClick}>GO</Button>
@@ -81,6 +82,7 @@ class App extends Component {
             <Divider />
 
             <Header as='h2'><a href="https://github.com/chrispanag/greek-name-mapper"><Icon name="github" />Translate Greek Name from Greeklish to Greek</a></Header>
+            <p>A dictionary-based NodeJS package that normalizes greek names from Greeklish to Greek adding the necessary diacritics.</p>
             <Form onSubmit={(event) => { event.preventDefault() }}>
               <Input style={{ width: '10vw', minWidth: '200px' }} type="text" value={greeklish_name} onChange={(event) => this.setState({ greeklish_name: event.target.value })} />
               <Button type="submit" style={{ marginLeft: '10px' }} onClick={this.toGreekClick}>GO</Button>
